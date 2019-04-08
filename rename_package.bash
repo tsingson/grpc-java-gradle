@@ -2,7 +2,7 @@
 
 set -e
 
-OLD_PACKAGE="io.github.caio.grpc";
+OLD_PACKAGE="io.github.goim.grpc";
 NEW_PACKAGE=$1
 SED=${SED:=sed}
 
