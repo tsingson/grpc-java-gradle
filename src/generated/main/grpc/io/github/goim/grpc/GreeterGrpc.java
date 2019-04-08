@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.12.0)",
+    value = "by gRPC proto compiler (version 1.19.0)",
     comments = "Source: hello_world.proto")
 public final class GreeterGrpc {
 
@@ -30,22 +30,16 @@ public final class GreeterGrpc {
   public static final String SERVICE_NAME = "helloworld.Greeter";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getSayHelloMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
-      io.github.goim.grpc.HelloResponse> METHOD_SAY_HELLO = getSayHelloMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
       io.github.goim.grpc.HelloResponse> getSayHelloMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SayHello",
+      requestType = io.github.goim.grpc.HelloRequest.class,
+      responseType = io.github.goim.grpc.HelloResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
       io.github.goim.grpc.HelloResponse> getSayHelloMethod() {
-    return getSayHelloMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
-      io.github.goim.grpc.HelloResponse> getSayHelloMethodHelper() {
     io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest, io.github.goim.grpc.HelloResponse> getSayHelloMethod;
     if ((getSayHelloMethod = GreeterGrpc.getSayHelloMethod) == null) {
       synchronized (GreeterGrpc.class) {
@@ -67,22 +61,17 @@ public final class GreeterGrpc {
      }
      return getSayHelloMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getServerStreamSayHelloMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
-      io.github.goim.grpc.HelloResponse> METHOD_SERVER_STREAM_SAY_HELLO = getServerStreamSayHelloMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
       io.github.goim.grpc.HelloResponse> getServerStreamSayHelloMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ServerStreamSayHello",
+      requestType = io.github.goim.grpc.HelloRequest.class,
+      responseType = io.github.goim.grpc.HelloResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
       io.github.goim.grpc.HelloResponse> getServerStreamSayHelloMethod() {
-    return getServerStreamSayHelloMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
-      io.github.goim.grpc.HelloResponse> getServerStreamSayHelloMethodHelper() {
     io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest, io.github.goim.grpc.HelloResponse> getServerStreamSayHelloMethod;
     if ((getServerStreamSayHelloMethod = GreeterGrpc.getServerStreamSayHelloMethod) == null) {
       synchronized (GreeterGrpc.class) {
@@ -104,22 +93,17 @@ public final class GreeterGrpc {
      }
      return getServerStreamSayHelloMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getClientStreamSayHelloMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
-      io.github.goim.grpc.HelloResponse> METHOD_CLIENT_STREAM_SAY_HELLO = getClientStreamSayHelloMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
       io.github.goim.grpc.HelloResponse> getClientStreamSayHelloMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ClientStreamSayHello",
+      requestType = io.github.goim.grpc.HelloRequest.class,
+      responseType = io.github.goim.grpc.HelloResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
   public static io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
       io.github.goim.grpc.HelloResponse> getClientStreamSayHelloMethod() {
-    return getClientStreamSayHelloMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
-      io.github.goim.grpc.HelloResponse> getClientStreamSayHelloMethodHelper() {
     io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest, io.github.goim.grpc.HelloResponse> getClientStreamSayHelloMethod;
     if ((getClientStreamSayHelloMethod = GreeterGrpc.getClientStreamSayHelloMethod) == null) {
       synchronized (GreeterGrpc.class) {
@@ -141,22 +125,17 @@ public final class GreeterGrpc {
      }
      return getClientStreamSayHelloMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getSayHelloStreamMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
-      io.github.goim.grpc.HelloResponse> METHOD_SAY_HELLO_STREAM = getSayHelloStreamMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
       io.github.goim.grpc.HelloResponse> getSayHelloStreamMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SayHelloStream",
+      requestType = io.github.goim.grpc.HelloRequest.class,
+      responseType = io.github.goim.grpc.HelloResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
       io.github.goim.grpc.HelloResponse> getSayHelloStreamMethod() {
-    return getSayHelloStreamMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest,
-      io.github.goim.grpc.HelloResponse> getSayHelloStreamMethodHelper() {
     io.grpc.MethodDescriptor<io.github.goim.grpc.HelloRequest, io.github.goim.grpc.HelloResponse> getSayHelloStreamMethod;
     if ((getSayHelloStreamMethod = GreeterGrpc.getSayHelloStreamMethod) == null) {
       synchronized (GreeterGrpc.class) {
@@ -216,55 +195,55 @@ public final class GreeterGrpc {
      */
     public void sayHello(io.github.goim.grpc.HelloRequest request,
         io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getSayHelloMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
     }
 
     /**
      */
     public void serverStreamSayHello(io.github.goim.grpc.HelloRequest request,
         io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getServerStreamSayHelloMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getServerStreamSayHelloMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloRequest> clientStreamSayHello(
         io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getClientStreamSayHelloMethodHelper(), responseObserver);
+      return asyncUnimplementedStreamingCall(getClientStreamSayHelloMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloRequest> sayHelloStream(
         io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getSayHelloStreamMethodHelper(), responseObserver);
+      return asyncUnimplementedStreamingCall(getSayHelloStreamMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getSayHelloMethodHelper(),
+            getSayHelloMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.github.goim.grpc.HelloRequest,
                 io.github.goim.grpc.HelloResponse>(
                   this, METHODID_SAY_HELLO)))
           .addMethod(
-            getServerStreamSayHelloMethodHelper(),
+            getServerStreamSayHelloMethod(),
             asyncServerStreamingCall(
               new MethodHandlers<
                 io.github.goim.grpc.HelloRequest,
                 io.github.goim.grpc.HelloResponse>(
                   this, METHODID_SERVER_STREAM_SAY_HELLO)))
           .addMethod(
-            getClientStreamSayHelloMethodHelper(),
+            getClientStreamSayHelloMethod(),
             asyncClientStreamingCall(
               new MethodHandlers<
                 io.github.goim.grpc.HelloRequest,
                 io.github.goim.grpc.HelloResponse>(
                   this, METHODID_CLIENT_STREAM_SAY_HELLO)))
           .addMethod(
-            getSayHelloStreamMethodHelper(),
+            getSayHelloStreamMethod(),
             asyncBidiStreamingCall(
               new MethodHandlers<
                 io.github.goim.grpc.HelloRequest,
@@ -303,7 +282,7 @@ public final class GreeterGrpc {
     public void sayHello(io.github.goim.grpc.HelloRequest request,
         io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getSayHelloMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -311,7 +290,7 @@ public final class GreeterGrpc {
     public void serverStreamSayHello(io.github.goim.grpc.HelloRequest request,
         io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloResponse> responseObserver) {
       asyncServerStreamingCall(
-          getChannel().newCall(getServerStreamSayHelloMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getServerStreamSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -319,7 +298,7 @@ public final class GreeterGrpc {
     public io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloRequest> clientStreamSayHello(
         io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloResponse> responseObserver) {
       return asyncClientStreamingCall(
-          getChannel().newCall(getClientStreamSayHelloMethodHelper(), getCallOptions()), responseObserver);
+          getChannel().newCall(getClientStreamSayHelloMethod(), getCallOptions()), responseObserver);
     }
 
     /**
@@ -327,7 +306,7 @@ public final class GreeterGrpc {
     public io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloRequest> sayHelloStream(
         io.grpc.stub.StreamObserver<io.github.goim.grpc.HelloResponse> responseObserver) {
       return asyncBidiStreamingCall(
-          getChannel().newCall(getSayHelloStreamMethodHelper(), getCallOptions()), responseObserver);
+          getChannel().newCall(getSayHelloStreamMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -359,7 +338,7 @@ public final class GreeterGrpc {
      */
     public io.github.goim.grpc.HelloResponse sayHello(io.github.goim.grpc.HelloRequest request) {
       return blockingUnaryCall(
-          getChannel(), getSayHelloMethodHelper(), getCallOptions(), request);
+          getChannel(), getSayHelloMethod(), getCallOptions(), request);
     }
 
     /**
@@ -367,7 +346,7 @@ public final class GreeterGrpc {
     public java.util.Iterator<io.github.goim.grpc.HelloResponse> serverStreamSayHello(
         io.github.goim.grpc.HelloRequest request) {
       return blockingServerStreamingCall(
-          getChannel(), getServerStreamSayHelloMethodHelper(), getCallOptions(), request);
+          getChannel(), getServerStreamSayHelloMethod(), getCallOptions(), request);
     }
   }
 
@@ -400,7 +379,7 @@ public final class GreeterGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.github.goim.grpc.HelloResponse> sayHello(
         io.github.goim.grpc.HelloRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getSayHelloMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
   }
 
@@ -501,10 +480,10 @@ public final class GreeterGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GreeterFileDescriptorSupplier())
-              .addMethod(getSayHelloMethodHelper())
-              .addMethod(getServerStreamSayHelloMethodHelper())
-              .addMethod(getClientStreamSayHelloMethodHelper())
-              .addMethod(getSayHelloStreamMethodHelper())
+              .addMethod(getSayHelloMethod())
+              .addMethod(getServerStreamSayHelloMethod())
+              .addMethod(getClientStreamSayHelloMethod())
+              .addMethod(getSayHelloStreamMethod())
               .build();
         }
       }
