@@ -433,6 +433,17 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: junit:junit:4.13-beta-2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.13-beta-2/2470c41ebd351f7edceac9eea7c414ac847a154/junit-4.13-beta-2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.13-beta-2/ed199b4373d943590a156ac9f1089b9121daf3e0/junit-4.13-beta-2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.13-beta-2/82aeb67084890746098fe1319eef2fe8c65dd67a/junit-4.13-beta-2-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.checkerframework:checker-compat-qual:2.5.2">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-compat-qual/2.5.2/dc0b20906c9e4b9724af29d11604efa574066892/checker-compat-qual-2.5.2.jar!/" />

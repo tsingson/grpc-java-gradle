@@ -1,6 +1,5 @@
 package io.github.goim.grpc;
 
-
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
@@ -28,6 +27,7 @@ public class HelloWorldClient {
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
 
+    // client function
     private void simpleSayHello(String name) {
         logger.info("Trying to sayHello " + name);
         try {
