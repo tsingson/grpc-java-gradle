@@ -61,5 +61,14 @@ public class HelloWorldServer {
             responseObserver.onNext(response);
             responseObserver.onCompleted();
         }
+
+        @Override
+        public void serverStreamSayHello(HelloRequest request, StreamObserver<HelloResponse> responseObserver) {
+            responseObserver.onNext(HelloResponse.newBuilder().setMessage("Hello 1--------------> " + request.getName()).build());
+            responseObserver.onNext(HelloResponse.newBuilder().setMessage("Hello 2--------------> " + request.getName()).build());
+            responseObserver.onNext(HelloResponse.newBuilder().setMessage("Hello 3--------------> " + request.getName()).build());
+            responseObserver.onNext(HelloResponse.newBuilder().setMessage("Hello 4--------------> " + request.getName()).build());
+            responseObserver.onCompleted();
+        }
     }
 }

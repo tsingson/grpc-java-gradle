@@ -35,16 +35,16 @@ public final class HelloWorldProto {
     java.lang.String[] descriptorData = {
       "\n\021hello_world.proto\022\nhelloworld\"\034\n\014Hello" +
       "Request\022\014\n\004name\030\001 \001(\t\" \n\rHelloResponse\022\017" +
-      "\n\007message\030\001 \001(\t2\252\002\n\007Greeter\022A\n\010SayHello\022" +
+      "\n\007message\030\001 \001(\t2\273\002\n\007Greeter\022A\n\010SayHello\022" +
       "\030.helloworld.HelloRequest\032\031.helloworld.H" +
-      "elloResponse\"\000\022I\n\016SayHelloStream\022\030.hello" +
-      "world.HelloRequest\032\031.helloworld.HelloRes" +
-      "ponse\"\0000\001\022I\n\016SayStreamHello\022\030.helloworld" +
-      ".HelloRequest\032\031.helloworld.HelloResponse" +
-      "\"\000(\001\022F\n\tSayStream\022\030.helloworld.HelloRequ" +
-      "est\032\031.helloworld.HelloResponse\"\000(\0010\001B(\n\023" +
-      "io.github.goim.grpcB\017HelloWorldProtoP\001b\006" +
-      "proto3"
+      "elloResponse\"\000\022O\n\024ServerStreamSayHello\022\030" +
+      ".helloworld.HelloRequest\032\031.helloworld.He" +
+      "lloResponse\"\0000\001\022O\n\024ClientStreamSayHello\022" +
+      "\030.helloworld.HelloRequest\032\031.helloworld.H" +
+      "elloResponse\"\000(\001\022K\n\016SayHelloStream\022\030.hel" +
+      "loworld.HelloRequest\032\031.helloworld.HelloR" +
+      "esponse\"\000(\0010\001B(\n\023io.github.goim.grpcB\017He" +
+      "lloWorldProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

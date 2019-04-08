@@ -4,6 +4,7 @@ package io.github.goim.grpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,27 +14,50 @@ public class HelloWorldClient {
 
     private final ManagedChannel channel;
     private GreeterGrpc.GreeterBlockingStub blockingStub;
+    private GreeterGrpc.GreeterStub asyncStub;
 
     private HelloWorldClient(String hostname, int port) {
         channel = ManagedChannelBuilder.forAddress(hostname, port)
                 .usePlaintext(true)
                 .build();
         blockingStub = GreeterGrpc.newBlockingStub(channel);
+        asyncStub = GreeterGrpc.newStub(channel);
     }
 
     private void shutdown() throws InterruptedException {
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
 
-    private void greet(String name) {
-        logger.info("Trying to greet " + name);
+    private void simpleSayHello(String name) {
+        logger.info("Trying to sayHello " + name);
         try {
             HelloRequest request = HelloRequest.newBuilder().setName(name).build();
             HelloResponse response = blockingStub.sayHello(request);
-            logger.info("Response: " + response.getMessage());
+            logger.info("Response: ---------->> " + response.getMessage());
         } catch (RuntimeException e) {
             logger.log(Level.WARNING, "Request to grpc server failed", e);
         }
+    }
+
+    private void serverStream(String name) {
+        // logger.info("Trying to sayHello " + name);
+        try {
+            HelloRequest request = HelloRequest.newBuilder().setName(name).build();
+            Iterator<HelloResponse> it = blockingStub.serverStreamSayHello(request);
+            while (it.hasNext()) {
+                HelloResponse response = it.next();
+                System.out.println("Response: ---------->> " + response.getMessage());
+                // logger.info("Response: ---------->> " + response.getMessage());
+            }
+        } catch (RuntimeException e) {
+            logger.log(Level.WARNING, "Request to grpc server failed", e);
+        }
+
+    }
+
+    private void syncSystemstream(String name) throws InterruptedException {
+        logger.info("async client");
+
     }
 
 
@@ -42,7 +66,9 @@ public class HelloWorldClient {
         String name = args.length > 0 ? args[0] : "tsingson call";
 
         try {
-            client.greet(name);
+            client.simpleSayHello(name);
+            logger.info("Response: ---------->> ");
+            client.serverStream(name);
         } finally {
             client.shutdown();
         }
